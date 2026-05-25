@@ -1,0 +1,33 @@
+<div class="container mt-4">
+
+    <h2>Categorias</h2>
+
+    <table class="table table-bordered">
+
+        <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Descrição</th>
+            <th>Ações</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr *ngFor="let c of categorias">
+
+            <td>{{ c.nome }}</td>
+            <td>{{ c.descricao }}</td>
+
+            <td>
+                <button
+                        class="btn btn-danger"
+                        (click)="deletar(c.id!)">
+                    Excluir
+                </button>
+            </td>
+
+        </tr>
+        </tbody>
+
+    </table>
+</div>
