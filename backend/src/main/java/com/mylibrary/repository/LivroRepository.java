@@ -16,4 +16,8 @@ public interface LivroRepository extends JpaRepository<Livro, Long> {
             String titulo,
             String autor
     );
+
+    Long countByStatus(StatusLivro status);
+
+    Long countByDataDevolucaoEfetivaIsNull();
 }
